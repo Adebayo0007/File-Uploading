@@ -52,7 +52,8 @@ public async Task<IActionResult> UploadToFileSystem(List<IFormFile> files, strin
                 Extension = extension,
                 Name = fileName,
                 Description = description,
-                FilePath = filePath
+                FilePath = filePath,
+                UploadedBy = "Ade"
             };
             _context.FileOnFileSystemModels.Add(fileModel);
             _context.SaveChanges();
